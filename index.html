@@ -1,0 +1,140 @@
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Elareibi Clearing & Forwarding Agency</title>
+<link rel="icon" type="image/x-icon" href="logo.ico">
+<link rel="stylesheet" href="style.css">
+ <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+<body>
+<header >
+    <div class="logo-area">
+    <div id="logo"></div>    
+    <div>
+    <p class="company-name">Elareibi Clearing & Forwarding Agency</p>  
+    <p  class="companynamee">Established 1967</p>  
+  </div>
+    </div>
+    <nav class="header-right">
+         <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#AboutUs">About Us</a></li>
+            <li><a href="#Services">Services</a></li>
+            <li><a href="#ContactUs">Contact Us</a></li>
+        </ul>
+    </nav>
+</header>
+<div class="parallax" id="ship">
+<div id="text"><p>"Servicing your Clearing and Forwarding needs by delivering reliable customs clearance, cargo handling, and logistics coordination services to support import and export operations throughout Libya"</p>
+</div>
+</div>
+  <div class="row" id="AboutUs">
+  <div class="left-text about-text">
+  <h1 class="about-title">Our Agency</h1>
+  <p class="established">Was established on 1967 in Benghazi.</p>
+  <p class="about-para">With over 50 years of experience, ELAREIBI Clearing and Forwarding Agency is one of the leading logistics agencies in Libya, offering trusted and professional door-to-door shipping solutions. Our agency has proudly worked with several international companies, providing complete services in customs clearance, freight forwarding, and logistics management. We are known for our reliability, efficiency, and strong commitment to delivering shipments safely and on time. Backed by decades of expertise and a dedicated team, ELAREIBI continues to build lasting partnerships based on trust, transparency, and excellence in every operation.</p>
+</div>
+
+  <div id="container"></div>
+
+</div>
+
+<div class="row" id="Services">
+  <h2 class="services-title">Our Services</h2>
+  <div class="services-grid">
+
+    <div class="service-circle">
+      <div class="circle-icon" id="circle-customs"></div>
+      <h3>Customs Clearing</h3>
+      <p class="about-para">We provide fast and reliable customs clearance for all your shipments. Our team ensures your goods pass through customs smoothly and on time, minimizing delays and avoiding unnecessary costs. With 50 years of experience, we handle all paperwork and regulations so you can focus on your business.</p>
+    </div>
+
+    <div class="service-circle">
+      <div class="circle-icon" id="circle-forwarding"></div>
+      <h3>Forwarding</h3>
+      <p class="about-para">We offer comprehensive freight forwarding solutions tailored to your needs. From planning routes to coordinating with carriers, we manage the entire process to ensure your shipments are handled efficiently and economically.</p>
+    </div>
+
+    <div class="service-circle">
+      <div class="circle-icon" id="circle-unloading"></div>
+      <h3>Unloading</h3>
+      <p class="about-para">Our expert team provides professional unloading services, taking care of your cargo with precision and safety. We handle all types of goods, ensuring they are delivered intact and ready for storage or distribution.</p>
+    </div>
+
+    <div class="service-circle">
+      <div class="circle-icon" id="circle-door"></div>
+      <h3>Door to Door</h3>
+      <p class="about-para">Experience the ultimate convenience with our door-to-door delivery solutions. We pick up your goods from the origin and deliver them directly to the destination, saving you time, effort, and hassle.</p>
+    </div>
+
+  </div>
+</div>
+
+<div class="row" id="ContactUs">
+<div class="contact-box">
+
+  <div class="text-side">
+  <h2>Contact Us</h2>
+  <p>📍 <a href="https://www.google.com/maps/search/22+Agadir+Str+Benghazi+Libya" target="_blank">22 Agadir Str, Biloun, Benghazi</a></p>
+  <p>📞 <a href="tel:+218910198105">+218 (0) 91 0198105</a></p>
+  <p>✉️ <a href="mailto:info@elareibi.com">info@elareibi.com</a></p>
+  <p>🌐 <a href="http://www.elareibi.com" target="_blank">www.elareibi.com</a></p>
+</div>
+
+<form class="contact-form" id="contact-form" action="https://formspree.io/f/mqeyqdrr" method="POST" >
+  <input type="text" name="name" placeholder="Your Name">
+  <input type="email" name="email" placeholder="Your Email">
+  <input type="text" name="subject" placeholder="Subject">
+  <textarea name="message" placeholder="Your Message"></textarea>
+  <button type="submit">Send Message</button>
+  <p id="success-msg" style="display:none; color:black">
+    Message sent! We'll be in touch soon.
+  </p>
+</form>
+<script>
+  const form = document.getElementById('contact-form');
+  form.addEventListener('submit', function(e) {
+     e.preventDefault(); 
+     fetch('https://formspree.io/f/mqeyqdrr', {
+    method: 'POST',
+    body: new FormData(form),
+    headers: { 'Accept': 'application/json' }
+  })
+  .then(function() {
+    document.getElementById('success-msg').style.display = 'block';
+    form.reset();    
+  });
+});
+</script>
+</div>
+</div>
+<script>
+  const sections = document.querySelectorAll('div[id]');
+  const navLinks = document.querySelectorAll('nav a');
+
+  window.addEventListener('scroll', function() {
+    let current = '';
+
+    sections.forEach(function(section) {
+      const sectionTop = section.offsetTop - 100;
+      if (window.scrollY >= sectionTop) {
+        current = section.getAttribute('id');
+      }
+    });
+
+    navLinks.forEach(function(link) {
+      link.classList.remove('active');
+      if (link.getAttribute('href') === '#' + current) {
+        link.classList.add('active');
+      }
+    });
+  });
+</script>
+<footer>
+  <p>&copy; 2025 Elareibi Clearing & Forwarding Agency. All Rights Reserved.</p>
+</footer>
+</body>
+</html>
