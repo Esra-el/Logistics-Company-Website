@@ -1,6 +1,6 @@
 # Elareibi Clearing & Forwarding Agency Website
 
-This is a responsive company website developed for **Elareibi Clearing & Forwarding Agency**, a logistics and customs clearance company based in  Libya.
+This is a responsive company website developed for **Elareibi Clearing & Forwarding Agency**, a logistics and customs clearance company.
 
 The website showcases the company’s services, history, and contact information in a clean, modern layout designed for both desktop and mobile users.
 
@@ -32,6 +32,20 @@ Check out the live website here: [Elareibi Clearing & Forwarding Agency](https:/
 - **Services** – Overview of logistics services
 - **Contact Us** – Contact information and message form
 
+## Screenshots
+
+### Hero / Home Section
+![Home](images/home.png)
+
+### About Us Section
+![About Us](images/AboutUs.png)
+
+### Services Section
+![Services](images/services.png)
+
+### Contact Us Section
+![Contact Us](images/contact.png)
+ 
 ## Project Structure
 Logistics-Company-Website
 │
